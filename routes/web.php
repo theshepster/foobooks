@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/books', 'BookController@index')->name('books.index');
+
+Route::get('/example', function() {
+    return App::environment();
+});
